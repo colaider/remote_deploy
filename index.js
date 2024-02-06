@@ -43,6 +43,9 @@ app.get('/write/:tog/:temp', (req,res) =>{
   write(req.params.tog, req.params.temp, req, res)
 })
 
+app.get('/set_state/:top', (req, res) =>{
+  write(req.params.top, 0, req, res)
+})
 
 app.get('/get', (req, res) => {
   // res.send('Hello World!');
